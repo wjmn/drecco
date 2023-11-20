@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+<!-- This is actually the game page template, but since all pages are game pages... -->
+
+{% block title %}{{page.title}}{% endblock title %}
+
+{% block content %}
+
+  <div class="game-page-top">
+    <h2 class="game-page-title">{{page.title}}</h2>
+    <h3 class="game-page-team">{{page.extra.team}}</h2>
+  </div>
+
+  <div class="game-page-content">
+    <img id="game-page-thumbnail" src="{{page.extra.thumbnail}}" alt="thumbnail" />
+    {{ page.content  | safe }}
+  </div>
+
+  <!-- Game Popup Button -->
+  <!-- Opens up the game (as long as the game path is in iframe.html relative to the game directory) -->
+  <script>
+      function popup() { 
+          var params = ['height='+screen.height, 'width='+screen.width, 'fullscreen=yes' ].join(',');
+          var newWindow = window.open("iframe.html", "Game", params); 
+          newWindow.moveTo(0,0) 
+      }
+  </script>
+
+  <div id="popup-button-container">
+    <button id="popup-button" onClick="popup()">Play in Popup</button>
+  </div>
+
+
+{% endblock content %}

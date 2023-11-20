@@ -1,0 +1,6 @@
+content/games/*
+!_index.md
+
+public
+
+config.toml
