@@ -81,6 +81,7 @@ title="My Game Title"
 team="My Team Name"
 thumbnail="thumbnail.png"
 +++
+```
 
 See the [Elm game template](https://github.com/wjmn/drecco-game-template) and [an example of a completed game with this template](https://github.com/wjmn/gomoku). 
 
