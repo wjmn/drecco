@@ -67,9 +67,10 @@ sort_by = "title"
 ```
 
 You can then add games as subdirectories inside that year (e.g. `content/games/2024/MyGame/`). Each game directory must contain:
-    1. `index.md`: a Markdown file describing the game (which gets shown on the description page for the game).
-    2. `iframe.html`: the actual game, bundled as a single static HTML file (if you open the HTML file, it should start the game!)
-    3. `thumbnail.png`: a thumbnail of the game, shown on the homepage at about 150px width.
+
+1. `index.md`: a Markdown file describing the game (which gets shown on the description page for the game).
+2. `iframe.html`: the actual game, bundled as a single static HTML file (if you open the HTML file, it should start the game!)
+3. `thumbnail.png`: a thumbnail of the game, shown on the homepage at about 150px width.
 
 The `index.md` markdown file must have the following frontmatter:
 
