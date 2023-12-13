@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     justify-content: stretch;
     background-color: #fafafa;
-    background-image: url("background.png");
+    background-image: url("background.jpg");
 }
 
 
@@ -110,6 +110,10 @@ footer {
     text-align: right;
 }
 
+footer .center {
+    padding: 0 2rem;
+}
+
 #content, .center {
     max-width: 960px;
     margin: auto;
@@ -126,7 +130,20 @@ footer {
 }
 
 #welcome-message {
-    font-size: 1.1em;
+    font-size: 1.4em;
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+#detail-image {
+    width: 180px;
+    margin-right: 2rem;
+    border: 1px solid black;
+}
+
+.dr-ecco-omniheurist {
+    font-variant: small-caps;
+    font-weight: bold;
 }
 
 .games-container {
@@ -177,7 +194,8 @@ footer {
     border-radius: 5px;
 }
 
-.game-card:hover {
+.game-card:hover img {
+    border: 1px solid #333;
 }
 
 .game-card:hover .game-card-label {
@@ -309,6 +327,7 @@ footer {
 
 #game-instructions {
     padding: 2rem;
+    position: relative;
 }
 
 #game-instructions h1, #game-instructions h2, #game-instructions h3, #game-instructions h4, #game-instructions h5, #game-instructions h6 {
@@ -316,11 +335,12 @@ footer {
     font-variant: small-caps;
     color: #333;
     font-weight: normal;
+    margin-bottom: 10px;
 }
 
 #game-instructions img {
     max-width: 50%;
-    margin: 2rem auto;
+    margin: 1rem auto;
     display: inline-block;
     border: 1px solid #ccc;
 }

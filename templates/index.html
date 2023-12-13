@@ -4,9 +4,18 @@
 
 {% block content %}
     <div id="welcome-message">
-      <b>Welcome!</b> This website contains competitive puzzles and games for your
-      mathematical/logical pleasure. All games were built by students in the class
-      <i>Heuristic Problem Solving</i> at NYU.
+
+      <img src="detail.jpg" id="detail-image">
+
+      <div>
+
+        <b>Welcome</b> to the <span class="dr-ecco-omniheurist">Dr Ecco Omniheurist</span> games
+        website! This website contains competitive puzzles and games for your
+        mathematical/logical pleasure. All games were built by students in the
+        class <i>Heuristic Problem Solving</i> at NYU.
+
+      </div>
+
     </div>
 
     {% for game_section_path in section.subsections %}
