@@ -46,11 +46,13 @@ To run the live development server:
 zola serve
 ```
 
-To build/rebuild for deployment:
+To build/rebuild for deployment, run the `build.sh` script:
 
 ```
-zola build
+./build.sh
 ```
+
+This will produce a `drecco-release.zip` zip file in this directory. Copy this file to the web server (e.g. in `/web/myusername/`), unzip it (which will create a directory `/web/myusername/drecco` with your website), then give it the correct permissions for the web server to access it (e.g. `chmod -R 755 drecco`). Your website should now be up and running on `cims.nyu.edu/~myusername/drecco`.
 
 # Adding Games
 
@@ -62,9 +64,12 @@ Then add a file `_index.md` inside that directory which must contain frontmatter
 ```md
 +++
 title = "2024"
+weight = 2024
 sort_by = "title"
 +++
 ```
+
+The weight is necessary for it to be sorted properly on the homepage.
 
 You can then add games as subdirectories inside that year (e.g. `content/games/2024/MyGame/`). Each game directory must contain:
 

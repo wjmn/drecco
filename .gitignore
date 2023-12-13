@@ -1,6 +1,14 @@
 content/games/*
+!content/games/2023
 !_index.md
 
+content/games/2023/*
+!content/games/2023/_index.md
+!content/games/2023/Gomoku
+!content/games/2023/Gomoku/*
+
 public
+public.zip
+drecco-release.zip
 
 config.toml
