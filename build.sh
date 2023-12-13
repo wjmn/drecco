@@ -3,6 +3,9 @@
 # https://www.getzola.org/documentation/getting-started/installation/
 zola build
 
+# Cleanup any previous builds
+rm -rf drecco-release.zip drecco
+
 # Rename and zip public directory
 mv public drecco
 chmod -R 755 drecco
