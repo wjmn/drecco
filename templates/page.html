@@ -12,8 +12,14 @@
   </div>
 
   <div class="game-page-content">
-    <img id="game-page-thumbnail" src="{{page.extra.thumbnail}}" alt="thumbnail" />
-    {{ page.content  | safe }}
+    <!-- <img id="game-page-thumbnail" src="{{page.extra.thumbnail}}" alt="thumbnail" /> -->
+    <div id="game-page-iframe-container"><iframe id="game-page-iframe" src="{{page.permalink}}/iframe.html"></iframe></div>
+    <div id="popup-button-container">
+      <button id="popup-button" onClick="popup()">Open Game in Popup Window</button>
+    </div>
+    <div id="game-instructions">
+      {{ page.content  | safe }}
+    </div>
   </div>
 
   <!-- Game Popup Button -->
@@ -26,9 +32,6 @@
       }
   </script>
 
-  <div id="popup-button-container">
-    <button id="popup-button" onClick="popup()">Play in Popup</button>
-  </div>
 
 
 {% endblock content %}
