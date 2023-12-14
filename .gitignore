@@ -10,5 +10,7 @@ content/games/2023/*
 public
 public.zip
 drecco-release.zip
+drecco
 
-config.toml
+zola
+mybuild.sh
