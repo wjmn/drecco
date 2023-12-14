@@ -77,7 +77,7 @@ thumbnail="thumbnail.png"
 
 If these variables aren't present for a game, then the site won't build. 
 
-It's probably easiest to see an example: see an example of a built game added to this website in `content/games/2023/Gomoku` (notice also the  `_index.md` file present in the `content/games/2023` folder). The source code used to build this game is available at [https://github.com/wjmn/gomoku](https://github.com/wjmn/gomoku). There is also a [blank Elm game template](https://github.com/wjmn/drecco-game-template) on which this game is based, which provides a template to help streamline defining settings and the build process.
+It's probably easiest to see an example: see an example of a built game added to this website in `content/games/2023/Gomoku` (notice also the  `_index.md` file present in the `content/games/2023` folder). The source code used to build this game is available at [https://github.com/wjmn/gomoku](https://github.com/wjmn/gomoku). There is also a [blank Elm game template](https://github.com/wjmn/drecco-game-template) on which this game is based, which provides a template to help streamline defining settings and the build process. You don't have to use this Elm template though - as long as your game produces a single HTML file (`iframe.html`) which runs the game when opened, then that will work too (e.g. if you code it manually using JavaScript & jQuery, or if you use React or Vue or some other web framework, or any other language which compiles to JavaScript). Please include all resources you need in your game folder, to help ensure links don't get broken. 
 
 Once you've added your games, rebuild the site for deployment (or it will update automatically if you're running the live development server). 
 
