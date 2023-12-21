@@ -37,7 +37,7 @@ To build/rebuild for deployment using CIMS Web Hosting, run the `build.sh` scrip
 ./build.sh "https://cims.nyu.edu/~myusername/drecco"
 ```
 
-This will produce a `drecco-release.zip` zip file in this directory. Copy this zip file to the web server and place it in the directory from which files are served (e.g. in `/web/myusername/`), unzip it (which will unzip a directory `/web/myusername/drecco` with your website), then give it the correct permissions for the web server to access it (e.g. `chmod -R 755 drecco`). Your website should now be up and running on `https://cims.nyu.edu/~myusername/drecco`.
+This will produce a `drecco-release.zip` zip file in this directory. This zip file contains a folder called `drecco`. Copy the zip file to the web server, unzip it, then place the `drecco` folder into your web hosting directory (e.g. as `/web/myusername/drecco`). You may also have to give it the correct permissions for the web server to access it (e.g. `chmod -R 755 drecco`). Your website should now be up and running on `https://cims.nyu.edu/~myusername/drecco`. You can also see the [NYU CIMS instructions for web hosting for some background information on this](https://cims.nyu.edu/dynamic/systems/userservices/webhosting/).
 
 # Adding Games
 
@@ -57,8 +57,8 @@ This defines variables for showing the year's games on the homepage. The weight 
 
 You can then add games as subdirectories inside that year (e.g. `content/games/2024/MyGame/`). Each game directory **must** contain the following files as a minimum:
 
-1. `index.md`: a Markdown file introducing and describing the rules of the game (which gets shown on the description page for the game).
-2. `iframe.html`: the actual game, bundled as a single static HTML file (if you open the HTML file, it should start the game!)
+1. `index.md`: a Markdown file introducing and describing the rules of the game (which gets shown on the description page for the game) which **must** have specific frontmatter variables defined (see below).
+2. `iframe.html`: the actual game, bundled as a single self-contained static HTML file (if you open the HTML file, it should start the game!)
 3. `thumbnail.png`: a thumbnail of the game, shown on the homepage at about 100px width.
 
 If you don't have all these files for each game, then the site won't build.
