@@ -28,16 +28,38 @@ zola serve
 
 # Deployment
 
-First, make sure you have installed Zola (either via your package manager, or download the [prebuilt binaries available on GitHub](https://github.com/getzola/zola/releases)).
+Using CIMS Web Hosting, You can deploy either to your own personal web page (this is useful for drafting while everyone is developing their games, so they can see how it will look on the website), or to the Dr Ecco website for the course.
 
+## Deploying to Personal Web Page
 
-To build/rebuild for deployment using CIMS Web Hosting, run the `build.sh` script, passing it the base URL that your site will be hosted on, e.g.:
+First, make sure you have installed Zola locally (either via your package manager, or download the [prebuilt binaries available on GitHub](https://github.com/getzola/zola/releases)).
+
+To build/rebuild for deployment using CIMS Web Hosting, run the `build.sh` script (you can do this locally), passing it the base URL that your site will be hosted on, e.g.:
 
 ```
 ./build.sh "https://cims.nyu.edu/~myusername/drecco"
 ```
 
-This will produce a `drecco-release.zip` zip file in this directory. This zip file contains a folder called `drecco`. Copy the zip file to the web server, unzip it, then place the `drecco` folder into your web hosting directory (e.g. as `/web/myusername/drecco`). You may also have to give it the correct permissions for the web server to access it (e.g. `chmod -R 755 drecco`). Your website should now be up and running on `https://cims.nyu.edu/~myusername/drecco`. You can also see the [NYU CIMS instructions for web hosting for some background information on this](https://cims.nyu.edu/dynamic/systems/userservices/webhosting/).
+This will produce a `drecco-release.zip` zip file in this directory. This zip file contains a folder called `drecco`. Copy the zip file to the web server, unzip it, then place the `drecco` folder into your web hosting directory (e.g. as `/web/myusername/drecco`). You may also have to give it the correct permissions for the web server to access it (e.g. `chmod -R 755 drecco`). Your website should now be up and running (e.g. on `https://cims.nyu.edu/~myusername/drecco`). You can also see the [NYU CIMS instructions for web hosting for some background information on this](https://cims.nyu.edu/dynamic/systems/userservices/webhosting/).
+
+## Deploying to Website for Course
+
+
+Again, first, make sure you have installed Zola locally (either via your package manager, or download the [prebuilt binaries available on GitHub](https://github.com/getzola/zola/releases)).
+
+To build/rebuild for deployment using CIMS Web Hosting, run the `build.sh` script (you can do this locally, you don't have to do this on the server), passing it the base URL for the course website (which is currently https://cims.nyu.edu/drecco2016):
+
+```
+./build.sh "https://cims.nyu.edu/drecco2016"
+```
+
+This produces a `drecco-release.zip` zip file in this directory, which contains a folder called `drecco`. You will need to copy the contents of the `drecco` folder to the folder for the course Dr Ecco website.
+
+The current Dr Ecco website for the course is located at `/usr/httpd/entities/drecco2016`. Remove all the current files in this folder first to make it an empty directory (you might want to back it up beforehand!)
+
+Then, copy the `drecco-release.zip` folder to the server, unzip it, then recursively copy all the contents of the unzipped `drecco` folder into `/usr/httpd/entities/drecco2016`. You will probably need to update the permission recursively too for all files in this directory so the server can access them (`chmod -R 755 ./*` inside the `drecco2016` directory.)
+
+
 
 # Adding Games
 
